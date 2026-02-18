@@ -1,5 +1,5 @@
 
-import { Project, Skill, Hobby } from './types';
+import { Project, Skill, Hobby } from './types.ts';
 
 export const PROJECTS: Project[] = [
   {

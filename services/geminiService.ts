@@ -3,7 +3,13 @@ import { GoogleGenAI } from "@google/genai";
 
 export const getCreativeInspiration = async (): Promise<string> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
+    if (!apiKey) {
+      console.warn("API Key is missing for Gemini service.");
+      return "Design something that tells a story through color and negative space.";
+    }
+
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: "Generate a unique, creative design prompt for a student portfolio. It should be one sentence, inspiring, and focus on communication design, branding, or illustration. Avoid generic advice.",

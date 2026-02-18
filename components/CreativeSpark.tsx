@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Sparkles, Loader2 } from 'lucide-react';
-import { getCreativeInspiration } from '../services/geminiService';
+import { getCreativeInspiration } from '../services/geminiService.ts';
 
 const CreativeSpark: React.FC = () => {
   const [inspiration, setInspiration] = useState<string | null>(null);

@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProjectCard from './components/ProjectCard';
-import Hobbies from './components/Hobbies';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import ProjectCard from './components/ProjectCard.tsx';
+import Hobbies from './components/Hobbies.tsx';
 import { PROJECTS } from './constants.tsx';
 import { Github, Linkedin, Instagram, Mail, ArrowUpRight, Send } from 'lucide-react';
 

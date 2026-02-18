@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { HOBBIES } from '../constants.tsx';
-import CreativeSpark from './CreativeSpark';
+import CreativeSpark from './CreativeSpark.tsx';
 
 const Hobbies: React.FC = () => {
   return (
