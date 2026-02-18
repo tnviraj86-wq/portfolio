@@ -26,18 +26,18 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="min-h-screen bg-pastel-blue dark:bg-slate-950 transition-colors duration-300">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-900">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <button 
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors font-medium"
+            className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-pastel-pink transition-colors font-medium"
           >
             <ArrowLeft size={20} /> Back to Gallery
           </button>
           <Link to="/" className="text-xl font-black tracking-tighter">
-            RAJ <span className="text-emerald-500">TANVI</span>
+            RAJ <span className="text-pastel-pink">TANVI</span>
           </Link>
         </div>
       </nav>
@@ -51,7 +51,7 @@ const ProjectDetail: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-bold tracking-widest uppercase mb-6">
+              <span className="inline-block px-4 py-1.5 bg-pastel-pink dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-full text-sm font-bold tracking-widest uppercase mb-6">
                 {project.category}
               </span>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
@@ -59,7 +59,7 @@ const ProjectDetail: React.FC = () => {
               </h1>
               <div className="flex flex-wrap gap-3">
                 {project.tags?.map(tag => (
-                  <span key={tag} className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 text-sm font-medium px-3 py-1 bg-slate-100 dark:bg-slate-900 rounded-lg">
+                  <span key={tag} className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 text-sm font-medium px-3 py-1 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
                     <Tag size={14} /> {tag}
                   </span>
                 ))}
@@ -117,7 +117,7 @@ const ProjectDetail: React.FC = () => {
             </div>
 
             <aside className="space-y-12">
-              <div className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800">
+              <div className="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                 <h3 className="text-xl font-bold mb-6">Project Details</h3>
                 <dl className="space-y-6">
                   <div>
@@ -133,17 +133,17 @@ const ProjectDetail: React.FC = () => {
                     <dd className="text-slate-900 dark:text-white font-medium">2023 - 2024</dd>
                   </div>
                 </dl>
-                <button className="w-full mt-8 bg-slate-900 dark:bg-white text-white dark:text-slate-950 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-500 dark:hover:bg-emerald-400 transition-colors">
+                <button className="w-full mt-8 bg-slate-900 dark:bg-white text-white dark:text-slate-950 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-pastel-pink dark:hover:bg-rose-400 transition-colors">
                   View Live Project <ExternalLink size={18} />
                 </button>
               </div>
 
-              <div className="p-8 rounded-3xl border border-emerald-500/20 bg-emerald-500/5">
+              <div className="p-8 rounded-3xl border border-pastel-pink/50 bg-white shadow-sm">
                 <h3 className="text-xl font-bold mb-4">Like this work?</h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-6">
                   I'm currently open for new projects and collaborations.
                 </p>
-                <Link to="/#contact" className="text-emerald-500 font-bold hover:underline">
+                <Link to="/#contact" className="text-pastel-pink font-bold hover:underline">
                   Let's talk about yours →
                 </Link>
               </div>
@@ -154,7 +154,7 @@ const ProjectDetail: React.FC = () => {
 
       <footer className="py-12 px-6 border-t border-slate-100 dark:border-slate-900 text-center">
         <Link to="/" className="text-2xl font-black tracking-tighter mb-4 inline-block">
-          RAJ <span className="text-emerald-500">TANVI</span>
+          RAJ <span className="text-pastel-pink">TANVI</span>
         </Link>
         <p className="text-slate-500 text-sm">© 2024 RAJ TANVI. ALL RIGHTS RESERVED.</p>
       </footer>

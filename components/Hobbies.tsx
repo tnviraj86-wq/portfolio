@@ -35,7 +35,7 @@ const Hobbies: React.FC = () => {
                   <div className="h-48 overflow-hidden rounded-2xl mb-4 grayscale hover:grayscale-0 transition-all duration-500">
                     <img src={hobby.imageUrl} alt={hobby.name} className="w-full h-full object-cover" />
                   </div>
-                  <h4 className="text-xl font-bold mb-2 group-hover:text-emerald-500 transition-colors">{hobby.name}</h4>
+                  <h4 className="text-xl font-bold mb-2 group-hover:text-pastel-pink transition-colors">{hobby.name}</h4>
                   <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                     {hobby.description}
                   </p>
@@ -50,7 +50,7 @@ const Hobbies: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="aspect-[4/5] bg-slate-100 dark:bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col justify-end p-12 relative group"
+                className="aspect-[4/5] bg-pastel-blue dark:bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col justify-end p-12 relative group shadow-xl"
              >
                 <img 
                   src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop" 
@@ -60,7 +60,7 @@ const Hobbies: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                 <div className="relative z-10 text-white">
                   <h3 className="text-3xl font-bold mb-4 font-serif italic">"Design is the silent ambassador of your brand."</h3>
-                  <p className="text-emerald-400 font-medium tracking-widest uppercase text-sm">— Paul Rand (My Inspiration)</p>
+                  <p className="text-pastel-pink font-medium tracking-widest uppercase text-sm">— Paul Rand (My Inspiration)</p>
                 </div>
              </motion.div>
              

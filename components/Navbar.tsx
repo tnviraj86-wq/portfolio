@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity"
         >
-          RT<span className="text-emerald-500">.</span>
+          RT<span className="text-pastel-pink">.</span>
         </a>
 
         {/* Desktop Menu */}
@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium hover:text-emerald-500 transition-colors uppercase tracking-widest"
+              className="text-sm font-medium hover:text-pastel-pink transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>

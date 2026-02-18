@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-emerald-500 font-medium tracking-[0.3em] uppercase text-sm"
+              className="text-pastel-pink font-medium tracking-[0.3em] uppercase text-sm"
             >
               Communication Designer & Storyteller
             </motion.p>
@@ -77,14 +77,14 @@ const Hero: React.FC = () => {
               <a 
                 href="#work" 
                 onClick={(e) => scrollToId(e, 'work')}
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all hover:gap-4 shadow-lg shadow-emerald-500/20"
+                className="bg-pastel-pink hover:bg-rose-100 text-slate-900 px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all hover:gap-4 shadow-lg shadow-rose-500/10"
               >
                 Explore My Work <ArrowDownRight size={20} />
               </a>
               <a 
                 href="#contact" 
                 onClick={(e) => scrollToId(e, 'contact')}
-                className="border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 px-8 py-4 rounded-full font-semibold transition-all"
+                className="border border-slate-200 dark:border-slate-800 hover:border-pastel-pink dark:hover:border-pastel-pink px-8 py-4 rounded-full font-semibold transition-all"
               >
                 Get In Touch
               </a>

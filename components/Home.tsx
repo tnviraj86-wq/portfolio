@@ -46,7 +46,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="min-h-screen bg-pastel-blue dark:bg-slate-950 transition-colors duration-300">
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
       
       <main>
@@ -62,7 +62,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
               className="mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Selected Works</h2>
-              <div className="h-1.5 w-24 bg-emerald-500 rounded-full" />
+              <div className="h-1.5 w-24 bg-pastel-pink rounded-full" />
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -86,17 +86,17 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
               >
                 <h2 className="text-5xl md:text-7xl font-bold mb-8">
                   Let's create <br />
-                  <span className="text-emerald-400 font-serif italic font-normal">together.</span>
+                  <span className="text-pastel-pink font-serif italic font-normal">together.</span>
                 </h2>
                 <p className="text-slate-400 text-xl mb-12 leading-relaxed max-w-lg">
                   Currently available for freelance opportunities and creative collaborations in branding and communication design.
                 </p>
                 
                 <div className="flex items-center gap-6 mb-16">
-                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="Instagram"><Instagram size={24} /></a>
-                  <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="LinkedIn"><Linkedin size={24} /></a>
-                  <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="GitHub"><Github size={24} /></a>
-                  <a href={socialLinks.email} className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="Email"><Mail size={24} /></a>
+                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-pastel-pink hover:text-slate-950 transition-all shadow-lg" aria-label="Instagram"><Instagram size={24} /></a>
+                  <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-pastel-pink hover:text-slate-950 transition-all shadow-lg" aria-label="LinkedIn"><Linkedin size={24} /></a>
+                  <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-pastel-pink hover:text-slate-950 transition-all shadow-lg" aria-label="GitHub"><Github size={24} /></a>
+                  <a href={socialLinks.email} className="p-4 bg-slate-900 rounded-full hover:bg-pastel-pink hover:text-slate-950 transition-all shadow-lg" aria-label="Email"><Mail size={24} /></a>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 border-t border-slate-800 pt-16 text-slate-400">
@@ -129,7 +129,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
                       value={formState.name}
                       onChange={handleInputChange}
                       placeholder="Raj Tanvi"
-                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors text-white placeholder:text-slate-700"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-pastel-pink transition-colors text-white placeholder:text-slate-700"
                     />
                   </div>
                   <div>
@@ -142,7 +142,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
                       value={formState.email}
                       onChange={handleInputChange}
                       placeholder="hello@example.com"
-                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors text-white placeholder:text-slate-700"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-pastel-pink transition-colors text-white placeholder:text-slate-700"
                     />
                   </div>
                   <div>
@@ -155,13 +155,13 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
                       value={formState.message}
                       onChange={handleInputChange}
                       placeholder="Tell me about your project..."
-                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors text-white placeholder:text-slate-700 resize-none"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-pastel-pink transition-colors text-white placeholder:text-slate-700 resize-none"
                     ></textarea>
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-white text-slate-950 hover:bg-emerald-400 px-8 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none group"
+                    className="w-full bg-white text-slate-950 hover:bg-pastel-pink px-8 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none group"
                   >
                     {isSubmitting ? 'Sending...' : submitted ? 'Message Sent!' : 'Send Message'}
                     {!isSubmitting && !submitted && <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
@@ -171,8 +171,8 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
             </div>
           </div>
           
-          <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-[80px]" />
+          <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] bg-pastel-pink/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-pastel-blue/5 rounded-full blur-[80px]" />
         </section>
       </main>
 
