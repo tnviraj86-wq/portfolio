@@ -4,8 +4,11 @@ export interface Project {
   title: string;
   category: 'Branding' | 'Print' | 'Illustration';
   description: string;
+  fullDescription?: string;
   image: string;
   color: string;
+  tags?: string[];
+  gallery?: string[];
 }
 
 export interface Skill {

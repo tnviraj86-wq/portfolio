@@ -3,18 +3,22 @@ import React from 'react';
 import { Project } from '../types.ts';
 import { ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectCardProps {
   project: Project;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const navigate = useNavigate();
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      onClick={() => navigate(`/project/${project.id}`)}
       className={`group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl ${project.color} p-4 md:p-6 cursor-pointer`}
     >
       <div className="relative aspect-square md:aspect-[4/3] overflow-hidden rounded-2xl mb-6">
