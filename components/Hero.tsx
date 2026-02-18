@@ -23,21 +23,21 @@ const Hero: React.FC = () => {
     <section className="relative min-h-[80vh] flex flex-col justify-center px-6 pt-32 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-          {/* Medium-sized, clean profile photo */}
+          {/* Medium-sized, clean portrait profile photo */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative shrink-0 group"
           >
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-slate-100 dark:border-slate-800 transition-all duration-500 group-hover:border-emerald-500 group-hover:shadow-emerald-500/20">
+            <div className="w-56 h-72 md:w-80 md:h-[480px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-slate-100 dark:border-slate-800 transition-all duration-500 group-hover:border-pastel-pink group-hover:shadow-rose-500/20">
               <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
                 alt="Raj Tanvi" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-pastel-pink/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </motion.div>
 
