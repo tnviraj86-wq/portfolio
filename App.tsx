@@ -6,6 +6,7 @@ import ProjectCard from './components/ProjectCard.tsx';
 import Hobbies from './components/Hobbies.tsx';
 import { PROJECTS } from './constants.tsx';
 import { Github, Linkedin, Instagram, Mail, ArrowUpRight, Send } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -70,10 +71,16 @@ const App: React.FC = () => {
         
         <section id="work" className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Selected Works</h2>
               <div className="h-1.5 w-24 bg-emerald-500 rounded-full" />
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
               {PROJECTS.map((project) => (
@@ -88,7 +95,12 @@ const App: React.FC = () => {
         <section id="contact" className="py-24 px-6 bg-slate-950 text-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
                 <h2 className="text-5xl md:text-7xl font-bold mb-8">
                   Let's create <br />
                   <span className="text-emerald-400 font-serif italic font-normal">together.</span>
@@ -114,9 +126,15 @@ const App: React.FC = () => {
                     <p>Open to: Branding, Editorial,<br />Typeface Design, Web</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-slate-900/50 backdrop-blur-sm p-8 md:p-12 rounded-[2.5rem] border border-slate-800 shadow-2xl">
+              <motion.div 
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-slate-900/50 backdrop-blur-sm p-8 md:p-12 rounded-[2.5rem] border border-slate-800 shadow-2xl"
+              >
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-2 px-1">Full Name</label>
@@ -166,7 +184,7 @@ const App: React.FC = () => {
                     {!isSubmitting && !submitted && <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                   </button>
                 </form>
-              </div>
+              </motion.div>
             </div>
           </div>
           

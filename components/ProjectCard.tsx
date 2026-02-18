@@ -2,6 +2,7 @@
 import React from 'react';
 import { Project } from '../types.ts';
 import { ExternalLink } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface ProjectCardProps {
   project: Project;
@@ -9,7 +10,13 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className={`group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl ${project.color} p-4 md:p-6 cursor-pointer`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl ${project.color} p-4 md:p-6 cursor-pointer`}
+    >
       <div className="relative aspect-square md:aspect-[4/3] overflow-hidden rounded-2xl mb-6">
         <img 
           src={project.image} 
@@ -34,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

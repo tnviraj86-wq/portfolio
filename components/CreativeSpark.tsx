@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { getCreativeInspiration } from '../services/geminiService.ts';
+import { motion, AnimatePresence } from 'motion/react';
 
 const CreativeSpark: React.FC = () => {
   const [inspiration, setInspiration] = useState<string | null>(null);
@@ -15,7 +16,13 @@ const CreativeSpark: React.FC = () => {
   };
 
   return (
-    <div className="mt-20 p-8 rounded-3xl bg-gradient-to-br from-emerald-500 to-indigo-600 text-white shadow-2xl overflow-hidden relative">
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="mt-20 p-8 rounded-3xl bg-gradient-to-br from-emerald-500 to-indigo-600 text-white shadow-2xl overflow-hidden relative"
+    >
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-4">
           <Sparkles className="animate-pulse" />
@@ -25,11 +32,20 @@ const CreativeSpark: React.FC = () => {
           Need a project idea or a fresh perspective? Ask my AI muse for a design prompt.
         </p>
         
-        {inspiration && (
-          <div className="mb-6 p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 animate-in zoom-in-95 duration-300">
-            <p className="italic font-medium leading-relaxed">"{inspiration}"</p>
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          {inspiration && (
+            <motion.div 
+              key={inspiration}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+              className="mb-6 p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20"
+            >
+              <p className="italic font-medium leading-relaxed">"{inspiration}"</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
         
         <button
           onClick={handleGenerate}
@@ -44,7 +60,7 @@ const CreativeSpark: React.FC = () => {
       {/* Background shapes */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-emerald-400/20 rounded-full blur-2xl" />
-    </div>
+    </motion.div>
   );
 };
 
