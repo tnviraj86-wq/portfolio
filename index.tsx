@@ -48,7 +48,7 @@ const PROJECTS: Project[] = [
     title: 'Ethos Organic Branding',
     category: 'Branding',
     description: 'A complete visual identity for a sustainable skincare brand focused on Himalayan botanicals.',
-    image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1620916566398-39f1143af7be?q=80&w=800&auto=format&fit=crop',
     color: 'bg-emerald-100 dark:bg-emerald-900/20'
   },
   {
@@ -56,7 +56,7 @@ const PROJECTS: Project[] = [
     title: 'The Modern Minimalist',
     category: 'Print',
     description: 'Editorial layout design for a monthly architecture and interior design magazine.',
-    image: 'https://images.unsplash.com/photo-1544476073-22e5d5abb167?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1586075010623-265839b4e1f1?q=80&w=800&auto=format&fit=crop',
     color: 'bg-indigo-100 dark:bg-indigo-900/20'
   },
   {
@@ -64,7 +64,7 @@ const PROJECTS: Project[] = [
     title: 'City Rhythms Series',
     category: 'Illustration',
     description: 'A series of vector illustrations capturing the vibrant street life of Ahmedabad and Gandhinagar.',
-    image: 'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1518131359073-ad293c3f9023?q=80&w=800&auto=format&fit=crop',
     color: 'bg-orange-100 dark:bg-orange-900/20'
   },
   {
@@ -72,7 +72,7 @@ const PROJECTS: Project[] = [
     title: 'Lunar Cafe Identity',
     category: 'Branding',
     description: 'Dark-themed branding for a late-night coffee house, featuring custom typography.',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop',
     color: 'bg-slate-100 dark:bg-slate-800/20'
   },
   {
@@ -120,13 +120,10 @@ const HOBBIES: Hobby[] = [
 // --- GEMINI SERVICE ---
 const getCreativeInspiration = async (): Promise<string> => {
   try {
-    const apiKey = process.env.API_KEY;
-    if (!apiKey) return "Design something that tells a story through color and negative space.";
-    
-    const ai = new GoogleGenAI({ apiKey });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
-      contents: "Generate a unique, one-sentence creative design prompt for a student portfolio. Focus on communication design or branding.",
+      contents: "Generate a unique, one-sentence creative design prompt for a communication design student. Make it poetic.",
     });
     return response.text || "Design something that tells a story through color and negative space.";
   } catch (error) {
@@ -167,7 +164,7 @@ const Navbar = ({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () => v
       isScrolled ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold tracking-tighter">RT<span className="text-emerald-500">.</span></a>
+        <a href="#" className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity">RT<span className="text-emerald-500">.</span></a>
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="text-sm font-medium hover:text-emerald-500 transition-colors uppercase tracking-widest">{link.name}</a>
@@ -214,7 +211,7 @@ const Hero = () => (
   </section>
 );
 
-const ProjectCard = ({ project }: { project: Project }) => (
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div className={`group relative overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-2xl ${project.color} p-4 md:p-6 cursor-pointer`}>
     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-6">
       <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -286,6 +283,14 @@ const App: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  // Functional Social Links - Fixed handle to rajtanvii and github to tnviraj86-wq
+  const socialLinks = {
+    instagram: "https://www.instagram.com/rajtanvii/",
+    linkedin: "https://www.linkedin.com/in/rajtanvi/",
+    github: "https://github.com/tnviraj86-wq",
+    email: "mailto:hello@rajtanvi.com"
+  };
+
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark);
   }, [isDark]);
@@ -311,14 +316,16 @@ const App: React.FC = () => {
         </div>
       </section>
       <Hobbies />
+      
       <section id="contact" className="py-24 px-6 bg-slate-950 text-white relative">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
           <div>
             <h2 className="text-5xl md:text-7xl font-bold mb-8">Let's create <span className="text-emerald-400 font-serif italic">together.</span></h2>
             <div className="flex gap-6 mb-16">
-              <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 transition-colors"><Instagram size={24} /></a>
-              <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 transition-colors"><Linkedin size={24} /></a>
-              <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 transition-colors"><Mail size={24} /></a>
+              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all"><Instagram size={24} /></a>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all"><Linkedin size={24} /></a>
+              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all"><Github size={24} /></a>
+              <a href={socialLinks.email} className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all"><Mail size={24} /></a>
             </div>
           </div>
           <div className="bg-slate-900/50 p-12 rounded-[2.5rem] border border-slate-800">
@@ -326,20 +333,24 @@ const App: React.FC = () => {
               <input type="text" placeholder="Full Name" required value={formState.name} onChange={e => setFormState({...formState, name: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors" />
               <input type="email" placeholder="Email Address" required value={formState.email} onChange={e => setFormState({...formState, email: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors" />
               <textarea placeholder="Your Message" required rows={4} value={formState.message} onChange={e => setFormState({...formState, message: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition-colors resize-none"></textarea>
-              <button type="submit" disabled={isSubmitting} className="w-full bg-white text-slate-950 hover:bg-emerald-400 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all">
+              <button type="submit" disabled={isSubmitting} className="w-full bg-white text-slate-950 hover:bg-emerald-400 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-50">
                 {isSubmitting ? 'Sending...' : submitted ? 'Message Sent!' : 'Send Message'} <Send size={20} />
               </button>
             </form>
           </div>
         </div>
       </section>
-      <footer className="py-8 px-6 bg-slate-950 text-slate-500 border-t border-slate-900 text-center uppercase tracking-widest text-xs">
-        © 2024 RAJ TANVI. ALL RIGHTS RESERVED.
+      <footer className="py-8 px-6 bg-slate-950 text-slate-500 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 uppercase tracking-widest text-xs">
+        <p>© 2024 RAJ TANVI. ALL RIGHTS RESERVED.</p>
+        <div className="flex gap-8">
+           <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">INSTAGRAM</a>
+           <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LINKEDIN</a>
+           <a href="#" className="hover:text-white transition-colors flex items-center gap-1">RESUME <ArrowUpRight size={12} /></a>
+        </div>
       </footer>
     </div>
   );
 };
 
-// --- MOUNT ---
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<App />);

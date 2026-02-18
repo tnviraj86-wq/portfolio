@@ -32,7 +32,7 @@ const Hobbies: React.FC = () => {
           <div className="w-full md:w-2/3">
              <div className="aspect-[4/5] bg-slate-100 dark:bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col justify-end p-12 relative group">
                 <img 
-                  src="https://picsum.photos/seed/artist/800/1000" 
+                  src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop" 
                   alt="Raj at work" 
                   className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000"
                 />

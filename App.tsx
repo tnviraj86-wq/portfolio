@@ -13,7 +13,7 @@ const App: React.FC = () => {
       const saved = localStorage.getItem('theme');
       return saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
-    return false;
+    return true;
   });
 
   const [formState, setFormState] = useState({
@@ -24,6 +24,14 @@ const App: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  // Functional Social Links - Fixed handle to rajtanvii and github to tnviraj86-wq
+  const socialLinks = {
+    instagram: "https://www.instagram.com/rajtanvii/",
+    linkedin: "https://www.linkedin.com/in/rajtanvi/",
+    github: "https://github.com/tnviraj86-wq",
+    email: "mailto:hello@rajtanvi.com"
+  };
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -41,7 +49,6 @@ const App: React.FC = () => {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setSubmitted(true);
@@ -61,7 +68,6 @@ const App: React.FC = () => {
       <main>
         <Hero />
         
-        {/* Project Gallery */}
         <section id="work" className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
@@ -79,11 +85,9 @@ const App: React.FC = () => {
 
         <Hobbies />
         
-        {/* Contact Section */}
         <section id="contact" className="py-24 px-6 bg-slate-950 text-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-              {/* Left Column: Info */}
               <div>
                 <h2 className="text-5xl md:text-7xl font-bold mb-8">
                   Let's create <br />
@@ -94,9 +98,10 @@ const App: React.FC = () => {
                 </p>
                 
                 <div className="flex items-center gap-6 mb-16">
-                  <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="Instagram"><Instagram size={24} /></a>
-                  <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="LinkedIn"><Linkedin size={24} /></a>
-                  <a href="#" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="GitHub"><Github size={24} /></a>
+                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="Instagram"><Instagram size={24} /></a>
+                  <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="LinkedIn"><Linkedin size={24} /></a>
+                  <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="GitHub"><Github size={24} /></a>
+                  <a href={socialLinks.email} className="p-4 bg-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-950 transition-all shadow-lg" aria-label="Email"><Mail size={24} /></a>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 border-t border-slate-800 pt-16 text-slate-400">
@@ -111,7 +116,6 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right Column: Contact Form */}
               <div className="bg-slate-900/50 backdrop-blur-sm p-8 md:p-12 rounded-[2.5rem] border border-slate-800 shadow-2xl">
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div>
@@ -166,7 +170,6 @@ const App: React.FC = () => {
             </div>
           </div>
           
-          {/* Decorative background circle */}
           <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-[80px]" />
         </section>
@@ -176,8 +179,8 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2024 RAJ TANVI. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">PRIVACY</a>
-            <a href="#" className="hover:text-white transition-colors">INSTAGRAM</a>
+            <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">INSTAGRAM</a>
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LINKEDIN</a>
             <a href="#" className="hover:text-white transition-colors flex items-center gap-1">RESUME <ArrowUpRight size={14} /></a>
           </div>
         </div>
