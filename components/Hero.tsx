@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           >
             <div className="w-56 h-72 md:w-80 md:h-[480px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-slate-100 dark:border-slate-800 transition-all duration-500 group-hover:border-pastel-pink group-hover:shadow-rose-500/20">
               <img 
-                src="/profile.jpg" 
+                src="https://drive.google.com/uc?export=view&id=1nqFxMn4APOuzs1M0Fa5yXp2K-QlQeS0G" 
                 alt="Raj Tanvi" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
