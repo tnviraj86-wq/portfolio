@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-pastel-pink font-medium tracking-[0.3em] uppercase text-sm"
+              className="text-rose-600 dark:text-pastel-pink font-medium tracking-[0.3em] uppercase text-sm"
             >
               Communication Designer & Storyteller
             </motion.p>
@@ -54,10 +54,10 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-slate-900 dark:text-white"
             >
               Raj Tanvi <br />
-              <span className="text-slate-400 dark:text-slate-600 font-serif italic font-normal">Based in Gandhinagar</span>
+              <span className="text-slate-400 dark:text-slate-500 font-serif italic font-normal">Based in Gandhinagar</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, x: -20 }}

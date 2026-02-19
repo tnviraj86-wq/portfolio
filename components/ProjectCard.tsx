@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <span className="inline-block px-3 py-1 bg-white/50 dark:bg-black/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-widest uppercase text-emerald-600 dark:text-emerald-400">
           {project.category}
         </span>
-        <h3 className="text-2xl font-bold group-hover:text-emerald-600 transition-colors">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
           {project.title}
         </h3>
         <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">

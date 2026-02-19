@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home.tsx';
 import ProjectDetail from './components/ProjectDetail.tsx';
+import HobbyDetail from './components/HobbyDetail.tsx';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -31,6 +32,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home isDark={isDark} toggleTheme={toggleTheme} />} />
         <Route path="/project/:id" element={<ProjectDetail />} />
+        <Route path="/hobby/:name" element={<HobbyDetail />} />
       </Routes>
     </Router>
   );

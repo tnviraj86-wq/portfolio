@@ -53,9 +53,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
         <a 
           href="#" 
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity"
+          className="text-2xl font-bold tracking-tighter hover:opacity-80 transition-opacity text-slate-900 dark:text-white"
         >
-          RT<span className="text-pastel-pink">.</span>
+          RT<span className="text-rose-600 dark:text-pastel-pink">.</span>
         </a>
 
         {/* Desktop Menu */}
@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium hover:text-pastel-pink transition-colors uppercase tracking-widest"
+              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-pastel-pink transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-lg font-semibold tracking-wide border-b border-transparent hover:border-emerald-500 w-fit"
+              className="text-lg font-semibold tracking-wide text-slate-900 dark:text-white border-b border-transparent hover:border-pastel-pink w-fit"
             >
               {link.name}
             </a>

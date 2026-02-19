@@ -20,5 +20,7 @@ export interface Skill {
 export interface Hobby {
   name: string;
   description: string;
+  fullDescription?: string;
   imageUrl: string;
+  gallery?: string[];
 }

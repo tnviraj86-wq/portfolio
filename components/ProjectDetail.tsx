@@ -36,8 +36,8 @@ const ProjectDetail: React.FC = () => {
           >
             <ArrowLeft size={20} /> Back to Gallery
           </button>
-          <Link to="/" className="text-xl font-black tracking-tighter">
-            RAJ <span className="text-pastel-pink">TANVI</span>
+          <Link to="/" className="text-xl font-black tracking-tighter text-slate-900 dark:text-white">
+            RAJ <span className="text-rose-600 dark:text-pastel-pink">TANVI</span>
           </Link>
         </div>
       </nav>
@@ -54,7 +54,7 @@ const ProjectDetail: React.FC = () => {
               <span className="inline-block px-4 py-1.5 bg-pastel-pink dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-full text-sm font-bold tracking-widest uppercase mb-6">
                 {project.category}
               </span>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-slate-900 dark:text-white">
                 {project.title}
               </h1>
               <div className="flex flex-wrap gap-3">
@@ -94,7 +94,7 @@ const ProjectDetail: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
             <div className="lg:col-span-2 space-y-12">
               <section>
-                <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
+                <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Challenge</h2>
                 <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
                   {project.fullDescription}
                 </p>
@@ -118,7 +118,7 @@ const ProjectDetail: React.FC = () => {
 
             <aside className="space-y-12">
               <div className="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
-                <h3 className="text-xl font-bold mb-6">Project Details</h3>
+                <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">Project Details</h3>
                 <dl className="space-y-6">
                   <div>
                     <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Client</dt>
@@ -139,8 +139,8 @@ const ProjectDetail: React.FC = () => {
               </div>
 
               <div className="p-8 rounded-3xl border border-pastel-pink/50 bg-white shadow-sm">
-                <h3 className="text-xl font-bold mb-4">Like this work?</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-6">
+                <h3 className="text-xl font-bold mb-4 text-slate-900">Like this work?</h3>
+                <p className="text-slate-600 mb-6">
                   I'm currently open for new projects and collaborations.
                 </p>
                 <Link to="/#contact" className="text-pastel-pink font-bold hover:underline">

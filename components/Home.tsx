@@ -61,7 +61,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
               transition={{ duration: 0.6 }}
               className="mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Selected Works</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Selected Works</h2>
               <div className="h-1.5 w-24 bg-pastel-pink rounded-full" />
             </motion.div>
             
@@ -86,7 +86,7 @@ const Home: React.FC<HomeProps> = ({ isDark, toggleTheme }) => {
               >
                 <h2 className="text-5xl md:text-7xl font-bold mb-8">
                   Let's create <br />
-                  <span className="text-pastel-pink font-serif italic font-normal">together.</span>
+                  <span className="text-rose-500 dark:text-pastel-pink font-serif italic font-normal">together.</span>
                 </h2>
                 <p className="text-slate-400 text-xl mb-12 leading-relaxed max-w-lg">
                   Currently available for freelance opportunities and creative collaborations in branding and communication design.

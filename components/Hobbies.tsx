@@ -3,6 +3,7 @@ import React from 'react';
 import { HOBBIES } from '../constants.tsx';
 import CreativeSpark from './CreativeSpark.tsx';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const Hobbies: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Hobbies: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Beyond the Canvas</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Beyond the Canvas</h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 When I'm not designing, you'll find me exploring the analog world. These passions fuel my digital creativity and keep my eyes sharp.
               </p>
@@ -32,13 +33,17 @@ const Hobbies: React.FC = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="group"
                 >
-                  <div className="h-48 overflow-hidden rounded-2xl mb-4 grayscale hover:grayscale-0 transition-all duration-500">
-                    <img src={hobby.imageUrl} alt={hobby.name} className="w-full h-full object-cover" />
-                  </div>
-                  <h4 className="text-xl font-bold mb-2 group-hover:text-pastel-pink transition-colors">{hobby.name}</h4>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                    {hobby.description}
-                  </p>
+                  <Link to={`/hobby/${hobby.name.toLowerCase()}`} className="block">
+                    <div className="h-48 overflow-hidden rounded-2xl mb-4 grayscale hover:grayscale-0 transition-all duration-500 shadow-md group-hover:shadow-xl">
+                      <img src={hobby.imageUrl} alt={hobby.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <h4 className="text-xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-pastel-pink transition-colors flex items-center gap-2">
+                      {hobby.name} <span className="text-sm font-normal opacity-0 group-hover:opacity-100 transition-opacity">View Story →</span>
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                      {hobby.description}
+                    </p>
+                  </Link>
                 </motion.div>
               ))}
             </div>
