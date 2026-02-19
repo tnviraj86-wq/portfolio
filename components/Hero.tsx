@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="max-w-xl text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed"
             >
-              Crafting soulful brand identities, editorial wonders, and illustrations that bridge the gap between tradition and modernism.
+              Crafting soulful brand identities, print design, and illustrations that bridge the gap between tradition and modernism.
             </motion.p>
             
             <motion.div 

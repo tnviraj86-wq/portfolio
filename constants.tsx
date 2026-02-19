@@ -60,9 +60,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '5',
-    title: 'Type & Form Specimen',
+    title: 'Typography',
     category: 'Print',
-    description: 'A large-format poster exploring the geometric structures of modern Sanskrit typefaces.',
+    description: 'Typography is a conversation between history and the future. This module explores that dialogue, stretching the rules of classic typesetting to find a modern visual rhythm.',
     fullDescription: 'This project is a deep dive into the anatomy of Devanagari letterforms. By deconstructing modern Sanskrit typefaces into their basic geometric components—circles, lines, and curves—I created a series of posters that highlight the mathematical precision behind traditional calligraphy. The result is a fusion of ancient script and contemporary graphic design principles.',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
     color: 'bg-mint-50 dark:bg-emerald-950/20',
