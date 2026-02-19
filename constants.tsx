@@ -101,14 +101,15 @@ export const SKILLS: Skill[] = [
 
 export const HOBBIES: Hobby[] = [
   {
-    name: 'Sketching',
-    description: 'I find peace in charcoal and ink. Sketching allows me to observe the world in slow motion.',
+    name: 'Analog Studies',
+    description: 'A collection of hand-rendered works, from precision fineliner sketches to textured paintings. Bridging the gap between physical craft and digital vision.',
     fullDescription: 'Sketching is my way of decompressing. Whether it\'s a quick gesture drawing in a crowded cafe or a detailed architectural study of Gandhinagar\'s brutalist structures, the act of putting pen to paper helps me process visual information in a way that digital tools can\'t. It\'s about the tactile connection between the eye, the mind, and the hand.',
     imageUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1544161515-436cefd1f16d?q=80&w=800',
       'https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?q=80&w=800',
-      'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=800'
+      'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=800',
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800'
     ]
   },
   {
