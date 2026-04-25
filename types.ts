@@ -2,7 +2,7 @@
 export interface Project {
   id: string;
   title: string;
-  category: 'Branding' | 'Print' | 'Illustration';
+  category: 'Typography' | 'Print Design' | 'Illustration' | 'Branding' | 'Print';
   description: string;
   fullDescription?: string;
   image: string;
