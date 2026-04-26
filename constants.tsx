@@ -11,7 +11,8 @@ export const PROJECTS: Project[] = [
     image: 'https://drive.google.com/thumbnail?id=1U_SS2DlmPIQb66tiWzLDkovxb0Z_himc&sz=w1000',
     color: 'bg-violet-50 dark:bg-violet-950/20',
     tags: [],
-    gallery: []
+    gallery: [],
+    link: 'https://heyzine.com/flip-book/c4ddc62c7c.html'
   },
   {
     id: '4',

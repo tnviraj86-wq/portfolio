@@ -93,6 +93,20 @@ const ProjectDetail: React.FC = () => {
           {/* Content Sections */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
             <div className="lg:col-span-2 space-y-12">
+              {!project.fullDescription && project.link && (
+                <section>
+                  <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Book</h2>
+                  <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+                    <iframe 
+                      src={project.link} 
+                      className="w-full h-full" 
+                      title="Adrian Frutiger Artist Book Flipbook"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </section>
+              )}
+
               {project.fullDescription && (
                 <section>
                   <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Challenge</h2>
@@ -137,9 +151,16 @@ const ProjectDetail: React.FC = () => {
                     <dd className="text-slate-900 dark:text-white font-medium">2023 - 2024</dd>
                   </div>
                 </dl>
-                <button className="w-full mt-8 bg-slate-900 dark:bg-white text-white dark:text-slate-950 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-pastel-pink dark:hover:bg-rose-400 transition-colors">
-                  View Live Project <ExternalLink size={18} />
-                </button>
+                {project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full mt-8 bg-slate-900 dark:bg-white text-white dark:text-slate-950 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-pastel-pink dark:hover:bg-rose-400 transition-colors"
+                  >
+                    View Flipbook <ExternalLink size={18} />
+                  </a>
+                )}
               </div>
 
               <div className="p-8 rounded-3xl border border-pastel-pink/50 bg-white shadow-sm">

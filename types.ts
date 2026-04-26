@@ -9,6 +9,7 @@ export interface Project {
   color: string;
   tags?: string[];
   gallery?: string[];
+  link?: string;
 }
 
 export interface Skill {
