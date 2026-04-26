@@ -4,7 +4,7 @@ import { Project, Skill, Hobby } from './types.ts';
 export const PROJECTS: Project[] = [
   {
     id: '3',
-    title: 'City Rhythms Series',
+    title: 'Adrian Frutiger - Artist Book',
     category: 'Print Design',
     description: 'A series of vector illustrations capturing the vibrant street life of Ahmedabad and Gandhinagar.',
     fullDescription: 'City Rhythms is a personal project exploring the chaotic beauty of urban life in Gujarat. Through a series of vibrant vector illustrations, I captured the small moments that define the city: a tea stall at dawn, the geometric patterns of a textile market, and the brutalist silhouettes of Gandhinagar\'s government buildings. The series uses a limited but bold color palette to create a cohesive visual narrative.',
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '4',
-    title: 'Lunar Cafe Identity',
+    title: 'Mithai Ka Dabba - Recipe Book',
     category: 'Print Design',
     description: 'Dark-themed branding for a late-night coffee house, featuring custom typography.',
     fullDescription: 'Lunar Cafe is a haven for night owls and creative thinkers. The branding project focused on the concept of "lunar phases," using circular motifs and a high-contrast palette of midnight blue and silver. I designed a custom display typeface that mimics the soft glow of the moon, which was used across signage, menus, and digital platforms to create an immersive, atmospheric brand experience.',
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '5',
-    title: 'Typography',
+    title: 'Character Design',
     category: 'Illustration',
     description: 'Typography is a conversation between history and the future. This module explores that dialogue, stretching the rules of classic typesetting to find a modern visual rhythm.',
     fullDescription: 'This project is a deep dive into the anatomy of Devanagari letterforms. By deconstructing modern Sanskrit typefaces into their basic geometric components—circles, lines, and curves—I created a series of posters that highlight the mathematical precision behind traditional calligraphy. The result is a fusion of ancient script and contemporary graphic design principles.',
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '6',
-    title: 'Botanical Dreams',
+    title: 'Explorations',
     category: 'Illustration',
     description: 'Surrealist digital illustrations blending human forms with local flora.',
     fullDescription: 'Botanical Dreams is a series of surreal digital paintings that explore the symbiotic relationship between humans and nature. Each piece blends anatomical details with the intricate patterns of local Gujarati flora, such as the Banyan leaf and the Marigold flower. The project aims to evoke a sense of wonder and remind viewers of our deep-rooted connection to the natural world.',
