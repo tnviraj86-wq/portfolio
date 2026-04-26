@@ -93,27 +93,31 @@ const ProjectDetail: React.FC = () => {
           {/* Content Sections */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
             <div className="lg:col-span-2 space-y-12">
-              <section>
-                <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Challenge</h2>
-                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                  {project.fullDescription}
-                </p>
-              </section>
+              {project.fullDescription && (
+                <section>
+                  <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Challenge</h2>
+                  <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                    {project.fullDescription}
+                  </p>
+                </section>
+              )}
 
-              <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {project.gallery?.map((img, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className="rounded-3xl overflow-hidden shadow-xl"
-                  >
-                    <img src={img} alt={`${project.title} gallery ${idx}`} className="w-full h-full object-cover aspect-[4/3]" />
-                  </motion.div>
-                ))}
-              </section>
+              {project.gallery && project.gallery.length > 0 && (
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {project.gallery.map((img, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: idx * 0.1 }}
+                      className="rounded-3xl overflow-hidden shadow-xl"
+                    >
+                      <img src={img} alt={`${project.title} gallery ${idx}`} className="w-full h-full object-cover aspect-[4/3]" />
+                    </motion.div>
+                  ))}
+                </section>
+              )}
             </div>
 
             <aside className="space-y-12">
