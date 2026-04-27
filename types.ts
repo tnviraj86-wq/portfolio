@@ -10,6 +10,9 @@ export interface Project {
   tags?: string[];
   gallery?: string[];
   link?: string;
+  client?: string;
+  role?: string;
+  year?: string;
 }
 
 export interface Skill {

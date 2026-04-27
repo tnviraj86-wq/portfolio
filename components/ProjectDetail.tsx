@@ -138,18 +138,24 @@ const ProjectDetail: React.FC = () => {
               <div className="bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                 <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">Project Details</h3>
                 <dl className="space-y-6">
-                  <div>
-                    <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Client</dt>
-                    <dd className="text-slate-900 dark:text-white font-medium">Confidential / Concept</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Role</dt>
-                    <dd className="text-slate-900 dark:text-white font-medium">Lead Communication Designer</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Year</dt>
-                    <dd className="text-slate-900 dark:text-white font-medium">2023 - 2024</dd>
-                  </div>
+                  {project.client && (
+                    <div>
+                      <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Client</dt>
+                      <dd className="text-slate-900 dark:text-white font-medium">{project.client}</dd>
+                    </div>
+                  )}
+                  {project.role && (
+                    <div>
+                      <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Role</dt>
+                      <dd className="text-slate-900 dark:text-white font-medium">{project.role}</dd>
+                    </div>
+                  )}
+                  {project.year && (
+                    <div>
+                      <dt className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Year</dt>
+                      <dd className="text-slate-900 dark:text-white font-medium">{project.year}</dd>
+                    </div>
+                  )}
                 </dl>
                 {project.link && (
                   <a 

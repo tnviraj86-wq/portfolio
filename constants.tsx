@@ -12,7 +12,8 @@ export const PROJECTS: Project[] = [
     color: 'bg-violet-50 dark:bg-violet-950/20',
     tags: [],
     gallery: [],
-    link: 'https://heyzine.com/flip-book/c4ddc62c7c.html'
+    link: 'https://heyzine.com/flip-book/c4ddc62c7c.html',
+    year: '2024'
   },
   {
     id: '4',
@@ -24,21 +25,25 @@ export const PROJECTS: Project[] = [
     color: 'bg-amber-50 dark:bg-amber-950/20',
     tags: [],
     gallery: [],
-    link: 'https://drive.google.com/file/d/1jC5EsVC4XIrQfbfuc7uNPo_3EQbrEw7y/preview'
+    link: 'https://drive.google.com/file/d/1jC5EsVC4XIrQfbfuc7uNPo_3EQbrEw7y/preview',
+    year: '2023'
   },
   {
     id: '5',
     title: 'Character Design',
     category: 'Illustration',
-    description: 'Typography is a conversation between history and the future. This module explores that dialogue, stretching the rules of classic typesetting to find a modern visual rhythm.',
-    fullDescription: 'This project is a deep dive into the anatomy of Devanagari letterforms. By deconstructing modern Sanskrit typefaces into their basic geometric components—circles, lines, and curves—I created a series of posters that highlight the mathematical precision behind traditional calligraphy. The result is a fusion of ancient script and contemporary graphic design principles.',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
+    description: 'An exploration of personality and form through digital illustration, focusing on expressive silhouettes and unique visual identities.',
+    fullDescription: '',
+    image: 'https://drive.google.com/thumbnail?id=1pZkiJkbtF5_kYnP_bS4AvrAroKSNcNCQ&sz=w1000',
     color: 'bg-mint-50 dark:bg-emerald-950/20',
     tags: [],
     gallery: [
-      'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800',
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800'
-    ]
+      'https://drive.google.com/thumbnail?id=1pZkiJkbtF5_kYnP_bS4AvrAroKSNcNCQ&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1wmyAVvIXt51ZXVY1qEU2ejCOAnG5HysQ&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1cuHtzKyaS2reqPofezIqJ4OpjL8XAJyO&sz=w1000',
+      'https://images.unsplash.com/photo-1510784722466-f2aa9c52aa6f?q=80&w=800'
+    ],
+    year: '2023'
   },
   {
     id: '6',
@@ -52,7 +57,10 @@ export const PROJECTS: Project[] = [
     gallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
       'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800'
-    ]
+    ],
+    client: 'Adobe Illustration Module',
+    role: 'Visual Artist',
+    year: '2022'
   }
 ];
 
@@ -77,11 +85,7 @@ export const HOBBIES: Hobby[] = [
       'https://images.unsplash.com/photo-1544161515-436cefd1f16d?q=80&w=800',
       'https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?q=80&w=800',
       'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=800',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800',
-      'https://images.unsplash.com/photo-1515405299443-f71bb768a63e?q=80&w=800',
-      'https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?q=80&w=800',
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800',
-      'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=800'
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800'
     ]
   },
   {
