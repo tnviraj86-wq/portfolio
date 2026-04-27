@@ -64,17 +64,19 @@ const HobbyDetail: React.FC = () => {
               <img src={hobby.imageUrl} alt={hobby.name} className="w-full h-full object-cover" />
             </div>
 
-            <section className="mb-20">
-              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Story</h2>
-              <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed whitespace-pre-line">
-                {hobby.fullDescription}
-              </p>
-            </section>
+            {hobby.fullDescription && hobby.name !== 'Photography' && hobby.name !== 'Analog Studies' && (
+              <section className="mb-20">
+                <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">The Story</h2>
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed whitespace-pre-line">
+                  {hobby.fullDescription}
+                </p>
+              </section>
+            )}
 
             {hobby.gallery && (
               <section>
                 <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Visual Journal</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   {hobby.gallery.map((img, idx) => (
                     <motion.div
                       key={idx}

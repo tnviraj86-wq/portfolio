@@ -79,7 +79,11 @@ export const HOBBIES: Hobby[] = [
       'https://images.unsplash.com/photo-1544161515-436cefd1f16d?q=80&w=800',
       'https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?q=80&w=800',
       'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=800',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800'
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800',
+      'https://images.unsplash.com/photo-1515405299443-f71bb768a63e?q=80&w=800',
+      'https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?q=80&w=800',
+      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800',
+      'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=800'
     ]
   },
   {
@@ -88,9 +92,18 @@ export const HOBBIES: Hobby[] = [
     fullDescription: 'Photography is my second language. I am particularly drawn to the harsh shadows and geometric purity of brutalist architecture. Gandhinagar, with its planned layout and iconic government buildings, provides an endless canvas for exploring form and light. I use my camera to document the "silent ambassadors" of our built environment, looking for the beauty in concrete and symmetry.',
     imageUrl: 'https://images.unsplash.com/photo-1452784444945-3f422708fe5e?q=80&w=800&auto=format&fit=crop',
     gallery: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800',
-      'https://images.unsplash.com/photo-1449156059431-787c5d7139b8?q=80&w=800',
-      'https://images.unsplash.com/photo-1470723710355-95304d8aece4?q=80&w=800'
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800',
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800',
+      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800',
+      'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800',
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=800',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800',
+      'https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=800',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=800',
+      'https://images.unsplash.com/photo-1510784722466-f2aa9c52aa6f?q=80&w=800',
+      'https://images.unsplash.com/photo-1505765050516-f72ddac9c60e?q=80&w=800',
+      'https://images.unsplash.com/photo-1475924156734-496f6acc671b?q=80&w=800',
+      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800'
     ]
   }
 ];
