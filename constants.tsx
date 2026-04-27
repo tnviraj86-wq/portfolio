@@ -18,15 +18,13 @@ export const PROJECTS: Project[] = [
     id: '4',
     title: 'Mithai Ka Dabba - Recipe Book',
     category: 'Print Design',
-    description: 'Dark-themed branding for a late-night coffee house, featuring custom typography.',
-    fullDescription: 'Lunar Cafe is a haven for night owls and creative thinkers. The branding project focused on the concept of "lunar phases," using circular motifs and a high-contrast palette of midnight blue and silver. I designed a custom display typeface that mimics the soft glow of the moon, which was used across signage, menus, and digital platforms to create an immersive, atmospheric brand experience.',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop',
+    description: 'A visual celebration of traditional Indian sweets, captured through vibrant photography and storytelling in a custom-designed recipe book.',
+    fullDescription: '',
+    image: 'https://drive.google.com/thumbnail?id=1jC5EsVC4XIrQfbfuc7uNPo_3EQbrEw7y&sz=w1000',
     color: 'bg-amber-50 dark:bg-amber-950/20',
     tags: [],
-    gallery: [
-      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800',
-      'https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800'
-    ]
+    gallery: [],
+    link: 'https://drive.google.com/file/d/1jC5EsVC4XIrQfbfuc7uNPo_3EQbrEw7y/preview'
   },
   {
     id: '5',

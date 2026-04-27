@@ -100,7 +100,7 @@ const ProjectDetail: React.FC = () => {
                     <iframe 
                       src={project.link} 
                       className="w-full h-full" 
-                      title="Adrian Frutiger Artist Book Flipbook"
+                      title={`${project.title} Viewer`}
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -158,7 +158,7 @@ const ProjectDetail: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-full mt-8 bg-slate-900 dark:bg-white text-white dark:text-slate-950 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-pastel-pink dark:hover:bg-rose-400 transition-colors"
                   >
-                    View Flipbook <ExternalLink size={18} />
+                    View Full Book <ExternalLink size={18} />
                   </a>
                 )}
               </div>
